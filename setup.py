@@ -11,6 +11,6 @@ setup(
     description='Useful utils for reverser',
     classifiers=[
                 'Programming Language :: Python :: 2.7'
-    ],  
+    ],
     zip_safe=False
 )
