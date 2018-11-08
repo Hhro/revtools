@@ -1,0 +1,7 @@
+bin
+dist
+include
+lib
+local
+pip-selfcheck.json
+rev.egg-info
