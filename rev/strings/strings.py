@@ -48,5 +48,5 @@ def rsh(s,op):
 
 def rot(s,op):
     l=s2l(s)
-    res=l[op:]+l[:op]
+    res=l[op%len(s):]+l[:op%len(s)]
     return l2s(res)
