@@ -1,11 +1,13 @@
 import sys
 
 from rev.commandline import common
+from rev.commandline import apk
 from rev.commandline import hash
 from rev.commandline import hex 
 from rev.commandline.common import parser
 
 commands = {
+    "apk": apk.main,
     "hex": hex.main,
     "hash": hash.main
 }
@@ -19,4 +21,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

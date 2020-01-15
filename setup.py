@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='rev',
@@ -6,6 +6,10 @@ setup(
     author='hhro',
     description='reversing',
     packages = [],
+    install_requires = [
+        "colorlog",
+        "gplaycli"
+    ],
     entry_points = {
         'console_scripts':[
             'rev=rev.commandline.main:main'

@@ -1,2 +1,2 @@
-from .log import logger
-from .strings.str import Str
+from rev.strings import *
+from rev.android import *
