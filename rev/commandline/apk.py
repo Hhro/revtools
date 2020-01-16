@@ -11,6 +11,19 @@ parser = common.parser_commands.add_parser(
 
 parser.add_argument("-d", "--download_apk",
     help = "Download apk file",
+    metavar = "APK_ID",
+    default = None
+)
+
+parser.add_argument("-de", "--decompile",
+    help = "Decompile apk file using `jadx`",
+    metavar = "APK",
+    default = None
+)
+
+parser.add_argument("--path",
+    help = "Destination path",
+    metavar = "DIR",
     default = None
 )
 
@@ -26,4 +39,7 @@ def main(args):
         pw = getpass("Password: ")
 
         apk.download_apk(args.download_apk, gmail, pw)
-
+    elif args.decompile != None:
+        apk.decompile_apk(args.decompile, args.path)
+    else:
+        parser.print_usage()

@@ -3,13 +3,13 @@ import colorlog
 
 def init_logger(dunder_name, testing_mode) -> logging.Logger:
     log_format = (
-        '%(levelname)s - '
+        '[%(levelname)s] '
         '%(message)s'
     )
     bold_seq = '\033[1m'
     colorlog_format = (
-        f'{bold_seq} '
-        '%(log_color)s '
+        f'{bold_seq}'
+        '%(log_color)s'
         f'{log_format}'
     )
     colorlog.basicConfig(format=colorlog_format)
